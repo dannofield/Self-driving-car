@@ -30,7 +30,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
 ![Solid White Curve](https://raw.githubusercontent.com/dannofield/Self-driving-car/master/test_images/solidWhiteCurve.jpg)
-![Solid White Curve](<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/test_images/solidWhiteCurve.jpg" width="100" height="100">)
+![Solid White Curve]<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/test_images/solidWhiteCurve.jpg" width="100" height="100">
 
 
 ### 2. Identify potential shortcomings with your current pipeline
