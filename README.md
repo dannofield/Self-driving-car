@@ -53,8 +53,19 @@ Content in the first column | <img src="https://raw.githubusercontent.com/dannof
 		<th>Spending</th>
  	</tr>
  	<tr>
-  		<td>January</td>
-   		<td>$100</td>
+  		<td>
+			Read in and grayscale the image
+```python
+# Read in the image
+image_original = mpimg.imread('test_images/solidWhiteCurve.jpg')
+# Read in and grayscale the image
+image_gray = grayscale(image_original)
+```
+		
+		</td>
+   		<td>
+			<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="300" height1="100">
+		</td>
 		<td>$900</td>
  	</tr>
 	<tr>
