@@ -29,8 +29,9 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-First Header | Second Header
------------- | -------------
++---------------+---------------+
+| Fruit         | Price         | 
++===============+===============+
 |Read in and grayscale the image					|<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="300" height1="100">|
 |```python								|	| 
 |# Read in the image							|	|
