@@ -36,6 +36,8 @@ Show output on original image | <img src="https://raw.githubusercontent.com/dann
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
+<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyLeftLines.png" width="300" height1="100">  <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyRightLine.png" width="300" height1="100">
+
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
 ### 2. Identify potential shortcomings with your current pipeline
