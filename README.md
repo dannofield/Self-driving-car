@@ -25,20 +25,19 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-
 | Process         | Output        | 
 ------------ | -------------
 Read in and grayscale the image|<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="400" height1="100">|
-Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageCanny.png" width="400" height1="100">
+Apply Gaussian smoothing. Define parameters for Canny and apply the Canny transform | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageCanny.png" width="400" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesUnmasked.png" width="400" height1="100">
-Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteres.png" width="400" height1="100">
+Next I create a masked edges image by defining a four sided polygon to be used as a mask
+ | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteres.png" width="400" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCanny.png" width="400" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusOriginal.png" width="400" height1="100">
 
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+
+If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
