@@ -29,67 +29,17 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-+---------------+---------------+
-| Fruit         | Price         | 
-+===============+===============+
-|Read in and grayscale the image					|<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="300" height1="100">|
-|```python								|	| 
-|# Read in the image							|	|
-|image_original = mpimg.imread('test_images/solidWhiteCurve.jpg')	|	|
-|# Read in and grayscale the image					|	|
-|image_gray = grayscale(image_original)					|	|
-|```									|	|
-+------------------------------------+----------------------------------------------+
 
- 
+| Process         | Output        | 
+------------ | -------------
+Read in and grayscale the image|<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="300" height1="100">|
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageCanny.png" width="300" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesUnmasked.png" width="300" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteres.png" width="300" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCanny.png" width="300" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusOriginal.png" width="300" height1="100">
 
-<table>
-	<tr>
-		<th>Month</th>
-		<th>Savings</th>
-		<th>Spending</th>
- 	</tr>
- 	<tr>
-  		<td>
-			Read in and grayscale the image
-			
-```python
-{
-# Read in the image
-image_original = mpimg.imread('test_images/solidWhiteCurve.jpg')
-# Read in and grayscale the image
-image_gray = grayscale(image_original)
-}
-```
-			
-		
-		</td>
-   		<td>
-			<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="300" height1="100">
-		</td>
-		<td>$900</td>
- 	</tr>
-	<tr>
-  		<td>July</td>
-   		<td>$750</td>
-		<td>$1000</td>
- 	</tr>
-	<tr>
-  		<td>December</td>
-   		<td>$250</td>
-		<td>$300</td>
- 	</tr>
-	<tr>
-  		<td>April</td>
-   		<td>$400</td>
-		<td>$700</td>
- 	</tr>
-</table>
+
 ### 2. Identify potential shortcomings with your current pipeline
 
 
