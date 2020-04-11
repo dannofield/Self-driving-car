@@ -44,16 +44,13 @@ x1:  454  y1:  332  x2:  466  y2:  323  m:  -0.75  b:  672.5
 x1:  408  y1:  366  x2:  420  y2:  357  m:  -0.75  b:  672.0
 x1:  280  y1:  460  x2:  346  y2:  410  m:  -0.7575757575757576  b:  672.1212121
 212121
-Average Left Lines
-[ -0.77765152 682.3979798 ]
 
 Right Lines
 x1:  482  y1:  311  x2:  876  y2:  538  m:  0.5761421319796954  b:  33.29949238578678
 x1:  490  y1:  313  x2:  898  y2:  539  m:  0.553921568627451  b:  41.578431372549005
 x1:  711  y1:  434  x2:  787  y2:  477  m:  0.5657894736842105  b:  31.7236842105263
 x1:  650  y1:  407  x2:  726  y2:  450  m:  0.5657894736842105  b:  39.23684210526318
-Average Right Lines
-[ 0.56541066 36.45961252]
+
 ```
 <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyLeftLines.png" width="300" height1="100">  <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyRightLine.png" width="300" height1="100">
 ```
