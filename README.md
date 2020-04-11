@@ -57,12 +57,16 @@ Content in the first column | <img src="https://raw.githubusercontent.com/dannof
  	<tr>
   		<td>
 			Read in and grayscale the image
+			
 ```python
+{
 # Read in the image
 image_original = mpimg.imread('test_images/solidWhiteCurve.jpg')
 # Read in and grayscale the image
 image_gray = grayscale(image_original)
+}
 ```
+			
 		
 		</td>
    		<td>
