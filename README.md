@@ -31,7 +31,9 @@ If you'd like to include images to show how the pipeline works, here is how to i
 
 First Header | Second Header
 ------------ | -------------
-Content from cell 1 | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="300" height1="100">
+###### Read in and grayscale the image
+image_gray = grayscale(image_original)
+ | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="300" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageCanny.png" width="300" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesUnmasked.png" width="300" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteres.png" width="300" height1="100">
