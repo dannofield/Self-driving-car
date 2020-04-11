@@ -52,7 +52,7 @@ x1:  711  y1:  434  x2:  787  y2:  477  m:  0.5657894736842105  b:  31.723684210
 x1:  650  y1:  407  x2:  726  y2:  450  m:  0.5657894736842105  b:  39.23684210526318
 
 ```
-<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyLeftLines.png" width="300" height1="100">  <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyRightLine.png" width="300" height1="100">
+<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyLeftLines.png" width="400" height1="100">  <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyRightLine.png" width="400" height1="100">
 ```
 Average Left Lines
 [ -0.77765152 682.3979798 ]
