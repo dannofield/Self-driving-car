@@ -46,7 +46,33 @@ Content in the first column | <img src="https://raw.githubusercontent.com/dannof
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCanny.png" width="300" height1="100">
 Content in the first column | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusOriginal.png" width="300" height1="100">
 
-
+<table>
+	<tr>
+		<th>Month</th>
+		<th>Savings</th>
+		<th>Spending</th>
+ 	</tr>
+ 	<tr>
+  		<td>January</td>
+   		<td>$100</td>
+		<td>$900</td>
+ 	</tr>
+	<tr>
+  		<td>July</td>
+   		<td>$750</td>
+		<td>$1000</td>
+ 	</tr>
+	<tr>
+  		<td>December</td>
+   		<td>$250</td>
+		<td>$300</td>
+ 	</tr>
+	<tr>
+  		<td>April</td>
+   		<td>$400</td>
+		<td>$700</td>
+ 	</tr>
+</table>
 ### 2. Identify potential shortcomings with your current pipeline
 
 
