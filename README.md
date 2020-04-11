@@ -35,7 +35,7 @@ Run Hough on edge detected image + a mask | <img src="https://raw.githubusercont
 Show output on original image | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusOriginal.png" width="400" height1="100">
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
+```
 Left Lines
 x1:  280  y1:  461  x2:  320  y2:  430  m:  -0.775  b:  678.0
 x1:  437  y1:  344  x2:  467  y2:  320  m:  -0.8  b:  693.6
@@ -54,7 +54,7 @@ x1:  711  y1:  434  x2:  787  y2:  477  m:  0.5657894736842105  b:  31.723684210
 x1:  650  y1:  407  x2:  726  y2:  450  m:  0.5657894736842105  b:  39.23684210526318
 Average Lines
 [ 0.56541066 36.45961252]
-
+```
 <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyLeftLines.png" width="300" height1="100">  <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyRightLine.png" width="300" height1="100">
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
