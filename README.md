@@ -65,15 +65,10 @@ def draw_lines_extrapolate(img, lines, color=[255, 0, 0], thickness=8):
 		right_line = []
 		for line in lines:
 			for x1,y1,x2,y2 in line:
-				#cv2.line(img, (x1, y1), (x2, y2), color, thickness)
 				m = (y2-y1)/(x2-x1)	#get slope
 				b = y1 - m*x1		#get intercept
 				if(m < 0. ):
 					left_line.append((m,b))
-					#cv2.line(img, (x1, y1), (x2, y2), [random.randint(0,255),random.randint(0,255),random.randint(0,255)], thickness)					
-					#cv2.circle(img, (x1, y1), 4, [255, 255, 0], 2)
-					#cv2.circle(img, (x2, y2), 4, [255, 255, 0], 2)
-					#print('x1: ',x1, ' y1: ',y1,' x2: ',x2, ' y2: ',y2,' m: ',m,' b: ',b)
 				else:
 					right_line.append((m,b))
 
