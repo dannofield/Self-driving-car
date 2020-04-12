@@ -58,6 +58,47 @@ Average Left Lines
 Average Right Lines
 [ 0.56541066 36.45961252]
 ```
+```python
+def draw_lines_extrapolate(img, lines, color=[255, 0, 0], thickness=8):
+	if lines is not None:
+		left_line = []
+		right_line = []
+		for line in lines:
+			for x1,y1,x2,y2 in line:
+				#cv2.line(img, (x1, y1), (x2, y2), color, thickness)
+				m = (y2-y1)/(x2-x1)	#get slope
+				b = y1 - m*x1		#get intercept
+				if(m < 0. ):
+					left_line.append((m,b))
+					#cv2.line(img, (x1, y1), (x2, y2), [random.randint(0,255),random.randint(0,255),random.randint(0,255)], thickness)					
+					#cv2.circle(img, (x1, y1), 4, [255, 255, 0], 2)
+					#cv2.circle(img, (x2, y2), 4, [255, 255, 0], 2)
+					#print('x1: ',x1, ' y1: ',y1,' x2: ',x2, ' y2: ',y2,' m: ',m,' b: ',b)
+				else:
+					right_line.append((m,b))
+
+		#Get average of all the left lines found
+		left_avg_line = np.average(left_line,axis=0)		
+		#Calculate its coordinates from m & b
+		avgslope,avgintercept = left_avg_line
+		y1 = img.shape[0]
+		y2 = int(y1*(3/5)) #only from the edge bottom up to 3/5th of the image
+		x1 = int((y1-avgintercept)/avgslope)
+		x2 = int((y2-avgintercept)/avgslope)
+		#Draw left line on image
+		cv2.line(img, (x1, y1), (x2, y2), color, thickness)
+		#Get average of all the right lines found
+		right_avg_line = np.average(right_line,axis=0)
+		#Calculate its coordinates from m & b
+		avgslope,avgintercept = right_avg_line
+		y1 = img.shape[0]
+		y2 = int(y1*(3/5)) #only from the edge bottom up to 3/5th of the image
+		x1 = int((y1-avgintercept)/avgslope)
+		x2 = int((y2-avgintercept)/avgslope)
+		cv2.line(img, (x1, y1), (x2, y2), color, thickness)
+
+```
+
 <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesExtrapolated.png" width="800" height1="100">
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
