@@ -21,17 +21,25 @@ The goals / steps of this project are the following:
 
 ### Self-driving car
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Line detection process description
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of 5 steps. 
+* Read and make a copy of the image/frame
+* Grayscale the image
+* Remove noise from it by blurring it
+* Apply Canny Edge function
+* Define region of Interest
+* Apply Hough Transform
+* Average and/or extrapolate the line segments to map out the full extent of the lane lines
+* Draw a single averaged line to eache line of the lane
 
 | Process         | Output        | 
 ------------ | -------------
 Read in and grayscale the image|<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageGreyScale.png" width="400" height1="100">|
 Apply Gaussian smoothing. Define parameters for Canny and apply the Canny transform | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageCanny.png" width="400" height1="100">
 Run Hough on edge detected image | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesUnmasked.png" width="400" height1="100">
-But first I created a masked edges image by defining a four sided polygon to be used as a mask | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteres.png" width="400" height1="100">
-Run Hough on edge detected image + a mask | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCanny.png" width="400" height1="100">
+But first, create a masked edge image by defining a four sided polygon to be used as a mask | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteres.png" width="400" height1="100">
+Run Hough transform on canny's output masked | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCanny.png" width="400" height1="100">
 Show output on original image | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusOriginal.png" width="400" height1="100">
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
