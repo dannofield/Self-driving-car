@@ -90,25 +90,31 @@ def draw_lines_extrapolate(img, lines, color=[255, 0, 0], thickness=8):
 				else:
 					right_line.append((m,b))
 
-		#Get average of all the left lines found
-		left_avg_line = np.average(left_line,axis=0)		
-		#Calculate its coordinates from m & b
-		avgslope,avgintercept = left_avg_line
-		y1 = img.shape[0]
-		y2 = int(y1*(3/5)) #only from the edge bottom up to 3/5th of the image
-		x1 = int((y1-avgintercept)/avgslope)
-		x2 = int((y2-avgintercept)/avgslope)
-		#Draw left line on image
-		cv2.line(img, (x1, y1), (x2, y2), color, thickness)
-		#Get average of all the right lines found
-		right_avg_line = np.average(right_line,axis=0)
-		#Calculate its coordinates from m & b
-		avgslope,avgintercept = right_avg_line
-		y1 = img.shape[0]
-		y2 = int(y1*(3/5)) #only from the edge bottom up to 3/5th of the image
-		x1 = int((y1-avgintercept)/avgslope)
-		x2 = int((y2-avgintercept)/avgslope)
-		cv2.line(img, (x1, y1), (x2, y2), color, thickness)
+		#Did we atleast have something?
+		if left_line:
+			#Get average of all the left lines found
+			left_avg_line = np.average(left_line,axis=0)		
+			#Calculate its coordinates from m & b
+			avgslope,avgintercept = left_avg_line			
+            	#Do not use faulty data 
+			if not (avgslope == -np.inf or avgslope == np.inf or avgslope == 0):
+				y1 = img.shape[0]
+				y2 = int(y1*(3/5)) #only from the edge bottom up to 3/5th of the image
+				x1 = int((y1-avgintercept)/avgslope)
+				x2 = int((y2-avgintercept)/avgslope)
+				#Draw left line on image
+				cv2.line(img, (x1, y1), (x2, y2), color, thickness)
+		if right_line:
+			#Get average of all the right lines found
+			right_avg_line = np.average(right_line,axis=0)
+			#Calculate its coordinates from m & b
+			avgslope,avgintercept = right_avg_line
+			if not (avgslope == -np.inf or avgslope == np.inf or avgslope == 0):
+				y1 = img.shape[0]
+				y2 = int(y1*(3/5)) #only from the edge bottom up to 3/5th of the image
+				x1 = int((y1-avgintercept)/avgslope)
+				x2 = int((y2-avgintercept)/avgslope)
+				cv2.line(img, (x1, y1), (x2, y2), color, thickness)
 
 ```
 ### Final Image with single lines to each side extrapolated
