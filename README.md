@@ -42,7 +42,12 @@ But first, create a masked edge image by defining a four sided polygon to be use
 Run Hough transform on canny's output masked | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCanny.png" width="400" height1="100">
 Show output on original image | <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusOriginal.png" width="400" height1="100">
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+## Improving the draw_lines() function
+
+After we had the Hough line segments drawn onto the road, we can see that the Hough function returns a set of lines in the same direction. I draw them with random colors so we can see them all.
+
+I printed the information of every single line marking the main lines (right and left) on the road. I printed the starting point (x1,y1), the end point (x2,y2) and with these two points we can calculate the slope and the intersection of every single little line.
+
 ```
 Left Lines
 x1:  280  y1:  461  x2:  320  y2:  430  m:  -0.775  b:  678.0
@@ -60,12 +65,17 @@ x1:  650  y1:  407  x2:  726  y2:  450  m:  0.5657894736842105  b:  39.236842105
 
 ```
 <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyLeftLines.png" width="400" height1="100">  <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesPlusCannyRightLine.png" width="400" height1="100">
+
+If we want to identify the full extent of the lane and marking it clearly as in the example video (P1_example.mp4), we can try to average and/or extrapolate the line segments we see on the images to map out the full extent of the lane lines. I identified each line as part of the left line or the right line of the road by the slope (negative or positive respectively). Then I created two arrays with these lines and I averaged them by using np.average. So we can end up with one single line that represents the set of lines returned by the Hough function.
+
 ```
 Average Left Lines
 [ -0.77765152 682.3979798 ]
 Average Right Lines
 [ 0.56541066 36.45961252]
 ```
+The new output draws a single, solid line over the left lane line and a single solid line over the right lane line. The lines start from the bottom of the image and extend out to the top of the region of interest (about 3/5th of the image).
+
 ```python
 def draw_lines_extrapolate(img, lines, color=[255, 0, 0], thickness=8):
 	if lines is not None:
