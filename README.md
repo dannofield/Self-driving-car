@@ -96,7 +96,7 @@ def draw_lines_extrapolate(img, lines, color=[255, 0, 0], thickness=8):
 			left_avg_line = np.average(left_line,axis=0)		
 			#Calculate its coordinates from m & b
 			avgslope,avgintercept = left_avg_line			
-            	#Do not use faulty data 
+			#Do not use faulty data 
 			if not (avgslope == -np.inf or avgslope == np.inf or avgslope == 0):
 				y1 = img.shape[0]
 				y2 = int(y1*(3/5)) #only from the edge bottom up to 3/5th of the image
