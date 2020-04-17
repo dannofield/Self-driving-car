@@ -9,8 +9,9 @@
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
+* [Ipython notebook](https://www.google.com)
+* [Result images](https://github.com/dannofield/Self-driving-car/tree/master/result_images)
+* [Video Outputs](https://github.com/dannofield/Self-driving-car/tree/master/test_videos_output)
 
 
 [//]: # (Image References)
