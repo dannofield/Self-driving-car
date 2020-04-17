@@ -111,10 +111,24 @@ def draw_lines_extrapolate(img, lines, color=[255, 0, 0], thickness=8):
 		cv2.line(img, (x1, y1), (x2, y2), color, thickness)
 
 ```
+### Final Image with single lines to each side extrapolated
 
 <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesExtrapolated.png" width="800" height1="100">
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+# Optional Challenge
+
+I tried to make it work. I figured out that the video had another resolution (1280x720). Also I saw that the part of the car that you can see on the bottom edge was affecting the algorithm. So I modified the region of interest to fit a bigger frame/image and to not include the bottom edge of the image.
+
+```python
+#Since we have video images of 960x540 and 1280x720 we are applying differente
+#shapes depending on the size of the image
+
+if(imshape[1] == 960):     #small image uses this mask
+    vertices = [(150,imshape[0]),(480, 300), (490, 300), (imshape[1]-30,imshape[0])]
+else:                    #large image uses this mask
+    vertices = [(int(imshape[1]*6/32),660),(620, 430), (710, 430), (imshape[1]-150,650)]
+```
+<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteres Challenge1.png" width="400" height1="100">  <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesExtrapolatedChallenge1.png" width="400" height1="100">
 
 ### 2. Identify potential shortcomings with your current pipeline
 
