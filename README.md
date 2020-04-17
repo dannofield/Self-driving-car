@@ -130,6 +130,10 @@ else:                    #large image uses this mask
 ```
 <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteres Challenge1.png" width="400" height1="100">  <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageHoughLinesExtrapolatedChallenge1.png" width="400" height1="100">
 
+However, when the road is whiter, the algorithm does not work at all. I guess it needs something more robust
+<img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteresChallenge2.png" width="400" height1="100">
+
+
 ### 2. Identify potential shortcomings with your current pipeline
 
 
