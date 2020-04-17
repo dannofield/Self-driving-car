@@ -31,7 +31,7 @@ My pipeline consisted of 5 steps.
 * Define region of Interest
 * Apply Hough Transform
 * Average and/or extrapolate the line segments to map out the full extent of the lane lines
-* Draw a single averaged line to eache line of the lane
+* Draw a single averaged line to eache side of the lane
 
 | Process         | Output        | 
 ------------ | -------------
