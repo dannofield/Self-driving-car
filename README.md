@@ -1,8 +1,6 @@
 # **Finding Lane Lines on the Road** 
 
-## Writeup Template
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+## Self Driving Car Engineer  - Udacity Nano Program
 
 ---
 
@@ -159,7 +157,12 @@ Also, we saw that when the road does not have a enough contrast, the algorithm  
 
 To be able to solve the camera position problem, would be a pre-tune subroutine to identify the area of interest.
 
-I don´t think there is a solution about the poor contrast in between the road and the lines. This should be solve using a different aproach like deeper image manipulation techniques.
+In order for us to find a solution about the poor contrast in between the road and the lines, we should implement a different approach. 
+
+This approach must be able to deal with discontinued lines, not properly marked or not marked at all.
+Some times we may have to trust only one line on the right side guided by the side-walk.
+
+But a better and more robust algorithm involving deeper image manipulation techniques and deep learning machine is necessary to be able to trust a completely autonomous machine .
 
 Original project taken from:
-[Udacity CarND-LaneLines-P1](https://github.com/udacity/CarND-LaneLines-P1)
+[Udacity CarND-LaneLines-P1](https://github.com/udacity/CarND-LaneLines-P1). Thank you
