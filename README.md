@@ -157,8 +157,9 @@ Also, we saw that when the road does not have a enough contrast, the algorithm  
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+To be able to solve the camera position problem, would be a pre-tune subroutine to identify the area of interest.
 
-Another potential improvement could be to ...
+I don´t think there is a solution about the poor contrast in between the road and the lines. This should be solve using a different aproach like deeper image manipulation techniques.
 
+Original project taken from:
 [Udacity CarND-LaneLines-P1](https://github.com/udacity/CarND-LaneLines-P1)
