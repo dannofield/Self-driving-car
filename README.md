@@ -144,12 +144,15 @@ However, when the road is whiter, the algorithm does not work at all. I guess it
 <img src="https://raw.githubusercontent.com/dannofield/Self-driving-car/master/result_images/imageAreaOfInteresChallenge2.png" width="400" height1="100">
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings with my current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+The possible shortcomings that we can see on our current approach, would be when the camera is positioned in a different way. 
+This would demage our previously defined area of interes.
 
-Another shortcoming could be ...
+But the problems that we can find more difficult to solve, would be when the road is not well defined. 
+
+Also, we saw that when the road does not have a enough contrast, the algorithm  starts struggling, even more when we have well defined shadows from trees.
 
 
 ### 3. Suggest possible improvements to your pipeline
