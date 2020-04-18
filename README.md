@@ -7,7 +7,7 @@
 **Finding Lane Lines on the Road**
 
 The goals / steps of this project are the following:
-* [Ipython notebook Git hub version](https://github.com/dannofield/Self-driving-car/blob/master/IpythonNotebookGitHub_version.ipynb)
+* [Ipython notebook Git hub version](https://github.com/dannofield/Self-driving-car/blob/master/IpythonNotebookGitHub_version.ipynb) has all the process and at the end shows how to put everything together to show and process the videos in real time
 * Source Code	
 	1. [Project1.py](https://github.com/dannofield/Self-driving-car/blob/master/Project1.ipynb) Generates video output and it plays the videos in real time
 	2. [Utils.py](https://github.com/dannofield/Self-driving-car/blob/master/utils.py) Has the modified function to extrapolate lines on the road
